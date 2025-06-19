@@ -1,5 +1,7 @@
 # frontened-battleR1
 
+## 🔗 Live Demo
+🌐 [View the deployed site here](https://glistening-muffin-497fb2.netlify.app/)
 ## ✅ Features Implemented
 
 ### 🔒 Mandatory Requirements
