@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Battle 2.0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <video src="assets/loader.mp4" autoplay muted loop></video>
+  </div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Frontend Battle</div>
+    <ul class="nav-menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#stats" class="nav-link">Stats</a></li>
+      <li><a href="#emissions" class="nav-link">Emissions</a></li>
+      <li><a href="#carousel" class="nav-link">Showcase</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle">Dark🌓Light</button>
+  </div>
+</nav>
+
+
+
+
+  <!-- Hero Section with Ripple Effect -->
+<section id="home" class="hero">
+  <video src="assets/homepage.mp4" autoplay muted loop></video>
+  <div class="hero-content">
+    <h1>Frontend Battle 2.0</h1>
+    <p>Replicate & Innovate</p>
+    <button class="ripple-btn">Explore</button>
+  </div>
+</section>
+
+
+  <!-- Stats Section -->
+ 
+  <section id="stats">
+  <h2>Portfolio Stats</h2>
+  <div class="stats-container">
+    <div class="stat">
+      <h3>Carbon Footprint</h3>
+      <p class="counter" data-target="45048">0</p>
+      <span>tCO₂e</span>
+    </div>
+    <div class="stat">
+      <h3>Energy Intensity</h3>
+      <p class="counter" data-target="123">0</p>
+      <span>kWh/m²</span>
+    </div>
+    <div class="stat">
+      <h3>Energy Consumption</h3>
+      <p class="counter" data-target="47790662">0</p>
+      <span>kWh</span>
+    </div>
+  </div>
+</section>
+
+   
+  <!-- Graph Section -->
+  
+  <section id="emissions" class="scroll-popup">
+    <h2>Embodied Carbon Emissions</h2>
+    <div class="filters">
+      <button class="filter active">All</button>
+      <button class="filter">Refurbishment</button>
+      <button class="filter">New Build</button>
+    </div>
+    <img src="assets/graph.png" alt="Graph" class="graph-img" />
+  </section>
+
+
+
+  <!-- Carousel Enhancement -->
+  <section id="carousel" class="scroll-popup">
+    <h2>Testimonials Carousel</h2>
+    <video src="assets/caraousel switch.mp4" autoplay muted loop controls></video>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Frontend Battle 2.0 — All Rights Reserved</p>
+    <p>Made with ❤️ by Ridhima</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+hr{
+  border: none;
+  border: 2px solid brown;
+}
+
+/* Reset and theme */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1e1e1e;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+body.dark .navbar {
+  background-color: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link:active {
+  color: var(--accent-color);
+  transform: scale(0.96);
+}
+
+/* Theme Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adjust darkness here */
+  z-index: -1;
+}
+
+
+/* Ripple Button */
+.ripple-btn {
+  position: relative;
+  padding: 0.8rem 2rem;
+  background-color: #00c9a7;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ripple-btn::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: url('assets/ripple effect.mp4') center center / cover no-repeat;
+  opacity: 0.1;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.ripple-btn:hover::after {
+  opacity: 0.3;
+}
+
+
+/* Stats */
+
+#stats {
+  padding: 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+h2{
+  text-align: center;
+  text-decoration: 4px brown solid underline;
+  font-style:oblique;
+  font-size: 40px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.stat {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  min-width: 220px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat h3 {
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.stat p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0.2rem 0;
+}
+
+.stat span {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+body.dark #stats {
+  background-color: #1f1f1f;
+  color:white;
+}
+
+body.dark .stat {
+  background-color: #2e2e2e;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.05);
+  color:white
+}
+
+body.dark h3{
+  color:white;
+}
+body.dark .counter{
+  color:white;
+}
+body.dark span{
+  color: white;
+}
+body.dark .stat:hover {
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Emissions Graph */
+#emissions {
+  padding: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #ddd;
+}
+
+.graph-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Carousel */
+#carousel {
+  padding: 2rem;
+  text-align: center;
+}
+
+#carousel video {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* footer */
+.footer {
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid brown;
+  font-weight: 600;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+}
+
+body.dark .footer {
+  background-color: #2e2e2e;
+  color: #eee;
+  border-top: 1px solid brown;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
+/* Scroll Popup Animation */
+.scroll-popup {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
